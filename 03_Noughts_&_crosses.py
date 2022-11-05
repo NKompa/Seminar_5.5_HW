@@ -1,8 +1,8 @@
 # Создайте программу для игры в "Крестики-нолики".
+
 def Print_array(array):
     for i in range(len(array)):
         print(array[i])
-
 
 def Check_winner(array):
     for x in range(len(array)):                     # проверка строк
@@ -25,7 +25,6 @@ def Check_winner(array):
         print(f'Победил Игрок {player}!')
         exit()
 
-
 board = [[0,0,0],[0,0,0],[0,0,0]]
 Print_array(board)
 
@@ -42,3 +41,4 @@ for x in range(len(board)):
            else: player = 1
        else:
             print('Эта клетка занята.')
+print('Ничья.')
