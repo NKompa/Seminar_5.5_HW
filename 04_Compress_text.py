@@ -3,7 +3,7 @@
 
 with open('Input.txt') as input:
     original_str = input.readline()
-print(original_str)
+print(f'Изначальная строка:\n{original_str}')
 
 code = ''
 symbol = original_str[0]
@@ -16,7 +16,7 @@ for i in range(1,len(original_str)):
         symbol = original_str[i]
         count = 1
 code = code + str(count) + symbol
-print(code)
+print(f'Сжатая строка:\n{code}')
 
 with open('Output.txt','w') as output:
     output.write(code)
@@ -29,4 +29,4 @@ for i in range(1,len(code)):
     else:
         decode = decode + code[i]*int(count)
         count = ''
-print(decode)
+print(f'Восстановленная строка:\n{decode}')
